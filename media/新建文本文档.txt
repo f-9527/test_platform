@@ -1,0 +1,383 @@
+
+mysql -u root -p
+
+
+python manage.py runserver 0.0.0.0:8000
+
+
+AutoMagic
+
+admian
+admin123456
+
+
+SFC /SCANNOW
+
+
+算立方：python cube_server.py
+
+挖链实时数据：sh run.sh
+
+（大平台部分已交接给付正国）
+    
+
+启动测试大平台整个项目：npm start
+
+    
+启动API接口平台：node /ApiLibrary/SBDoc/SBDoc/bin/www
+
+    
+启动wiki： ./start_xwiki.sh -p 8010 -sp 8011
+
+   
+启动API性能平台：locust -f /ApiTesting/locust_test_1.py --host=http://test.renrenhua.com:8081（这里需要测试什么自己指定）
+
+    
+
+testLink: 需要在application下启动XAMPP项目，依次启动即可。
+
+
+
+邮箱
+fuzhengguo@xiaochong.com
+Fzg317
+
+禅道&jira
+fzg, 111111
+
+
+算立方：
+
+前台地址：https://xiaochongtestcube.hc.top
+
+
+后台地址：https://managertest.hc.top
+
+测试地址前端：http://47.97.166.210/
+
+测试后端地址：http://47.97.166.210:8082
+M站           http://47.97.166.210:3003
+
+
+
+
+
+
+
+优质资源
+知乎周刊：	  http://zhuanlan.zhihu.com/Weekly User Link
+码农周刊：	  http://weekly.manong.io/ User Link
+Pycoder's Weekly：http://pycoders.com/archive/ User Link
+Hacker News：     https://news.ycombinator.com/ User Link
+Startup News：    http://news.dbanotes.net/ User Link
+极客头条：        http://geek.csdn.net/ User Link
+InfoQ：           http://www.infoq.com/cn User Link
+Stack Overflow：  http://stackoverflow.com/ User Link
+FreeBuf：         http://www.freebuf.com/ User Link
+WooYun：          http://drops.wooyun.org/ User Link
+
+http://blog.knownsec.com/
+
+http://evilcos.me/
+
+
+
+
+locust教程 性能
+
+https://github.com/small99/AutoLine 
+
+
+c++和java的区别:
+c++源于c，更接近于底层语言
+C++ 编译成本地机器码, 可以由操作系统直接运行，运行效率较高
+Java 编译成字节码，需由Java虚拟机读取运行， 所以效率偏低
+C++需要程序员自己回收，对内存进行良好的管理，而Java则不需要程序员自己完成这个工作，有自己的垃圾回收机制
+C++引用其他内容时需要include，而Java则用package和import
+
+1、什么是兼容性测试?兼容性测试侧重哪些方面?
+
+主要检验的是软件的可移植性，检查软件在不同的硬件平台软件平台上是否可以正常的运行。细分会有：平台的兼容，网络兼容，数据库兼容，数据格式的兼容等。
+
+2、常用的测试方法有哪些？
+
+黑盒测试，白盒测试，静态测试和动态测试，手工测试和动态测试，回归测试，公测。
+
+3，白盒测试和黑盒测试的区别？
+
+黑盒测试是功能性测试，一般采用穷举输入测试，不会考虑内部的逻辑和实现。兼容性，安全性测试，压力测试，性能测试。
+
+白盒测试是结构测试，一般是穷举路径测试，检测内部逻辑驱动结构。 – 语句覆盖 – 判定覆盖 – 条件覆盖 – 判定－条件覆盖 – 条件组合覆盖 – 路径覆盖
+
+5、正交表测试用例设计方法的特点是什么?
+
+　　参考答案：
+
+　　用最少的实验覆盖最多的操作，测试用例设计很少，效率高，但是很复杂;
+
+　　对于基本的验证功能，以及二次集成引起的缺陷，一般都能找出来;但是更深的缺陷，更复杂的缺陷，还是无能为力的;
+
+　　具体的环境下，正交表一般都很难做的。大多数，只在系统测试的时候使用此方法。
+
+7、测试用例设计的完整过程？
+
+　　　　1，需求分析，
+
+　　　　2，根据需求分析，得出测试需求
+
+　　　　3，设计测试方案
+
+　　　　4，评审设计方案，
+
+　　　　5，通过后设计测试用例，
+
+　　　　6，测试用例评审
+
+　　　　7，测试
+
+14、简述一下缺陷的生命周期?
+
+提交->确认->分配->修复->验证->关闭
+
+ 
+
+15,、软件的安全性应该从哪几个方面去测试？
+
+　　　　1，用户认证机制，
+
+　　　　2，加密机制
+
+　　　　3，安全防护策略，安全日志等，
+
+　　　　4，数据备份和恢复
+
+　　　　5，防病毒系统。
+
+
+
+
+16、单元测试，集成测试，系统测试的区别？
+
+测试方法不同：单元测试属于白盒测试，集成测试属于灰盒测试，系统测试属于黑盒测试。
+
+考察范围测试重点不同：单元测试注重单元内部的数据结构，逻辑控制，异常处理。
+
+集成测试注重模块之间的接口及接口之间的数据传递，系统测试注重满足需求。
+
+基准不同：单元测试主要的逻辑覆盖，集成测试主要是接口覆盖，系统测试是测试用例对需求规格的覆盖率。
+
+
+
+
+
+杨辉三角
+装饰器
+生成器
+
+
+|my_app
+    |-app/
+        |-templates/  模板文件
+        |-static/  静态文件（css、js等）
+        |-main/
+            |-__init__.py  创建蓝本
+            |-errors.py  错误处理
+            |-forms.py  表单类
+            |-views.py  路由
+        |-__init__.py  扩展和配置初始化、程序工厂函数、注册蓝本               
+        |-email.py  邮件支持
+        |-models.py  数据库模型
+    |-migrations/  数据库迁移脚本
+    |-tests/  测试
+        |-__init__.py
+        |-test*.py
+    |-venv/  虚拟环境
+    |-requirements.txt  需求文件
+    |-config.py  程序配置
+    |-manage.py  启动脚本
+
+
+
+autolne 部署
+
+Mysql安装与配置
+先安装mysql数据库，使用utf-8字符编码新增autoline数据库
+
+修改.env中关于数据库的配置，主要是：
+
+DATABASE_URL=mysql+pymysql://root:123456@127.0.0.1/autoline
+TRIGGER_DATABASE_URL=mysql+pymysql://root:123456@127.0.0.1/autoline
+把上述两个配置中root:12345改为你的mysql的账户和密码 把127.0.0.1改为你的mysql的服务器地址即可
+
+AutoLine安装依赖包
+
+pip install -r requirements.txt
+
+等待安装完成
+
+配置文件说明
+在AutoLine目录下的.env为所有关键的配置项
+
+# 用于定义运行环境
+# production - 生产环境
+# development - 开发环境 
+AUTOBEAT_CONFIG=production
+
+# 服务器端启动秘钥，这里随意输入一串字符
+SECRET_KEY=FJWEOIO138989340SNNFISLDNFIOWFNSNALFKNSDLKF
+
+# SMTP账号
+MAIL_SERVER=
+MAIL_PORT=587
+MAIL_USERNAME=
+MAIL_PASSWORD=25
+FLASKY_MAIL_SUBJECT_PREFIX=[AutoLine]
+FLASKY_MAIL_SENDER=AutoLine Admin <autoline@126.com>
+
+# 默认admin账号, 默认密码123456
+FLASKY_ADMIN=autoline@126.com
+
+# 数据库连接字符串
+DATABASE_URL=mysql+pymysql://root:123456@127.0.0.1/autoline
+
+# 调度连接字符串
+TRIGGER_DATABASE_URL=mysql+pymysql://root:123456@127.0.0.1/autoline
+初始化及运行
+在配置好上述配置后如何运行AutoLine？
+
+一. 初始化数据库
+
+python manage.py db init
+
+python manage.py db migrate -m "initial migration"
+
+python manage.py db upgrade
+
+二. 初始化数据
+
+python manage.py deploy
+
+三. 内网运行方式
+
+python manage.py runserver
+
+打开浏览器访问：http://127.0.0.1:5000即可
+
+外网访问运行方式
+使用下面的命令即可
+
+python manage.py runserver -h 0.0.0.0 -p 8000
+
+-h 指定ip（ip指定为0.0.0.0即可自定绑定本机IP）
+
+-p 指定端口号
+
+这时你就可以用在其他机器通过： http://ip:端口 来访问平台了
+
+
+
+
+
+
+
+
+
+
+
+
+
+codingame：
+https://github.com/f-9527/playground-vyvycjwu.git
+
+
+多次点击，多次请求
+
+
+C:\Users\admin\AppData\Roaming\
+
+monkey：
+简单输出测试信息
+adb shell monkey -p com.xiaochong.xiaochongkz -v 1000>D:\test.txt
+
+为随机数的事件序列定一个值，若出现问题下次可以重复同样的系列进行排错。
+adb shell monkey -p com.xiaochong.xiaochongkz -s 100 -v 500
+
+adb shell monkey -p com.xiaochong.xiaochongkz --throttle 50 -s 100 --ignore-crashes --ignore-timeouts --ignore-security-exceptions --ignore-native-crashes --monitor-native-crashes -v -v -v 1000>D:\test.txt
+
+adb shell monkey -p com.xiaochong.xiaochongkz --throttle 50 -s 100 --ignore-timeouts --ignore-security-exceptions  -v -v -v 1000
+
+
+
+开启fitnesse
+java -jar fitnesse-standalone.jar
+
+mongod.exe --dbpath "d:\data\db" --logpath "d:\data\logs\db.log" --install --serviceName "mongo" --logappend --directoryperdb
+
+
+flask ：
+「视图」、「模板」、「模型」、「MVC」、「中间件」、「REST API」
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 做正确的事情      而非  正确地做事情
+
+1.测试是项目的"车头灯"，它告诉大家现在到哪了，正在往哪个方向走。
+2.测试为项目组提供信息，使得项目组基于可靠的信息作出正确的决定。
+3.测试人员不作出项目发布的决定。
+4.测试员不保证质量，整个项目组对质量负责。
+5.测试不是抓虫子的游戏，它的目的不是纠缠在错误中，而是帮助找到目标。
+
+
+
+最近在脉脉上看到某某公司斩掉测试团队啊,某某开发嘲讽测试人员啊╮(╯▽╰)╭,转个测试行业看法聊以自慰,至少现在还有碗饭吃。
+ 
+测试行业的趋势有这么些：
+ 
+功能测试依然存在，但是会变得越来越难找工作
+ 
+功能测试不可能消失，即使Google这种高技术的公司，也依然存在功能测试，所以功能测试肯定不会消失，但是工作一定会越来越难找。国内的企业招聘都是从众心理，大家都觉得BAT的招聘是业界的方向，所以现在都开始要求测试人员必须会各种编程语言，实际上他们也不知道自己要什么，入职后也可能还是点点点，但是由于他们都这么要求，如果不会些代码，工作必然是难找的。
+ 
+自动化接口测试会越来越受到重视
+ 
+在移动互联网时代，对于质量的要求比PC时代高的多，而投入产出比最高的自动化接口测试，将会是大部分公司的首选方向。在快速迭代的过程中，一个完善的接口测试体系能够在很大程度上保证产品的质量，而这部分的投入相对于单元测试和UI自动化测试来说，并不多。
+ 
+UI自动化测试的真面目慢慢会被发现
+ 
+过去在PC端的UI自动化一度让QTP大放异彩，各种培训机构层出不穷，然后在移动互联网时代，UI自动化的问题越来越明显，快速迭代中产品前端的快速变化，会使UI自动化代码的管理复杂程度呈几何级数的增长。如果没有规划好，那么修改代码的成本将是一场灾难，即使自动化系统高度解耦，UI元素的管理和调试的成本也非常巨大，相对来说手工点点点更划得来。
+ 
+单元测试依然不是主流
+ 
+无论是测试行业的大佬都在强调，还是那个标志性的测试三角都在告诉我们单元测试是非常重要而且非常有必要实施的。但是单元测试成本大确实是不争的事实，单元测试要做到持续集成，需要的开销太大，对于测试这种无法量化收益的部门来说，这样的开销大多数公司是承受不起的。所以虽然单元测试很重要，但是依然难成为主流。
+ 
+性能测试依然是稀缺的大肥肉
+ 
+性能测试以前，现在以及将来，都会是稀缺的大肥肉。性能测试不是简简单单的用LR或者Jmeter弄一些高并发就能称为性能测试。要测试性能，首先要非常懂开发语言，还要非常熟悉系统，能够分析出系统的性能瓶颈，性能断点，并且针对性的提供解决方案，大部分有这方面能力的人，都转去做开发了，毕竟开发拿的钱多。
+ 
+综合素质依然是非常重要的指标
+ 
+企业越来越需要综合性的测试人才，从流程上看，测试介于产品和开发之间，需要懂人话（和产品沟通），也需要懂猿话（和开发沟通）。没有一定的综合能力很难胜任这份工作。
+ 
+持续集成是近期的技能亮点，远期的基础技能
+ 
+持续集成是目前非常流行的开发方式，如果能够掌握这项技能，在近期绝对是应聘的大杀器。但是从远期看，这将会是一个基础技能，类似现在招聘要求会脚本语言一样，以后这门技术也会成为一个标配。
+ 
+冷门测试技术是未开垦的肥地
+
+
+去公积金管理中心 提供上海的公积金号 和缴费公司名称 就好了
+
+
+
+

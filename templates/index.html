@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="/static/images/test.ico">
+	<title>{% block title %}{% endblock %}</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="robots" content="" />
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+
+	<link rel="stylesheet" href="/static/css/style1.css" media="all" />
+	<!--[if IE]><link rel="stylesheet" href="/static/css/ie.css" media="all" /><![endif]-->
+	<!--[if lt IE 9]><link rel="stylesheet" href="/static/css/lt-ie-9.css" media="all" /><![endif]-->
+	{% block css %}{% endblock %}
+</head>
+<body>
+<div class="testing">
+<section class="user">
+	<div class="profile-img">
+		<p><img src="/static/images/uiface2.png" alt="" height="40" width="40" /> 欢迎 John Doe</p>
+	</div>
+	<div class="buttons">
+		<button class="ico-font">&#9206;</button>
+
+		<span class="button">Live</span>
+		<span class="button">Help</span>
+		<span class="button blue"><a href="/login">Logout</a></span>
+	</div>
+</section>
+</div>
+<nav>
+	<ul>
+		<li id="control"><a href="/"><span class="icon">&#128211;</span> 控制面板</a></li>
+		<li id="wiki">
+			<a href="/wiki"><span class="icon">&#128196;</span> Wiki</a>
+		</li>
+		<li>
+			<a href="files.html"><span class="icon">&#128280;</span> 项目 </a>
+		</li>
+		<li>
+			<a href="blog-timeline.html"><span class="icon">&#128204;</span> 测试 </a>
+			<!--<ul class="submenu">-->
+				<!--<li><a href="blog-new.html">ui测试</a></li>-->
+				<!--<li><a href="blog-table.html">接口测试</a></li>-->
+				<!--<li><a href="comments-timeline.html">性能测试</a></li>-->
+			<!--</ul>-->
+		</li>
+		<li><a href="statistics.html"><span class="icon">&#10000;</span> Statistics</a></li>
+		<li><a href="users.html"><span class="icon">&#10020;</span> Users </a></li>
+		<li>
+			<a href="ui-elements.html"><span class="icon">&#9881;</span> UI Elements</a>
+		</li>
+	</ul>
+</nav>
+
+
+<section class="content">
+	<section class="widget ">
+		{% block subtitle %}
+		<header>
+			<span class="icon">&#128200;</span>
+			<hgroup>
+				<h1>Website Statistics</h1>
+				<h2>An insiders view</h2>
+			</hgroup>
+		</header>
+		{% endblock %}
+		<div style="min-height:700px">
+			{% block content %}
+
+			{% endblock %}
+		</div>
+
+	</section>
+
+</section>
+
+<footer>
+<div style="height:30px;position:relative; bottom:0;text-align:center;width:100%">
+Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a> - More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a>
+</div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script src="/static/js/jquery.wysiwyg.js"></script>
+<script src="/static/js/custom.js"></script>
+<script src="/static/js/cycle.js"></script>
+<script src="/static/js/jquery.checkbox.min.js"></script>
+<script src="/static/js/cycle.js"></script>
+<script>
+$(document).ready(function() {
+
+	$('nav ul li').click(
+		function(){
+			$(this).addClass('section');
+			$(this).siblings().removeClass('section')
+		}
+	)
+
+})
+
+
+// Feature slider for graphs
+$('.cycle').cycle({
+	fx: "scrollHorz",
+	timeout: 0,
+    slideResize: 0,
+    prev:    '.left-btn',
+    next:    '.right-btn'
+});
+
+{% block script %}
+	$(function(){
+	$('#control').addClass('section')
+	})
+
+{% endblock %}
+
+</script>
+
+
+</body>
+</html>

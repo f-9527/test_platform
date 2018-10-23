@@ -1,0 +1,65 @@
+{% extends 'index.html' %}
+
+{% block title %} 测试大平台 {% endblock %}
+
+{% block css %}
+
+<style xmlns="http://www.w3.org/1999/html">
+
+
+
+
+</style>
+
+{% endblock %}
+
+{% block subtitle %}
+
+<header>
+    <span class="icon">&#128196;</span>
+    <hgroup>
+        <h1>测试文档</h1>
+        <h2>技术共享</h2>
+    </hgroup>
+</header>
+
+{% endblock %}
+
+{% block content %}
+<div style= "margin:30px;">
+    <input id='file_upload' style="font-size:150%;display:inline;width:300px;" type="file">
+    <button style="display:inline;font-size:150%;" onclick="fileUpload()" >上传</button>
+</div>
+
+{% for f in files %}
+<div style= "margin:20px;">
+    <a href="{{MEDIA_URL}}{{f}}" target="view_window"><p style="font-size:200%;">{{f}}</p></a>
+</div>
+{% endfor %}
+
+{% endblock %}
+
+{% block script %}
+    $(function(){
+        $('#wiki').addClass('section')})
+
+
+    function fileUpload() {
+            var form_data = new FormData();
+            var file_info =$( '#file_upload')[0].files[0];
+            form_data.append('file',file_info);
+            if(file_info==undefined){
+                alert('你没有选择任何文件');}
+            else{$.ajax({
+                url:'/upload_file',
+                type:'POST',
+                data: form_data,
+                processData: false,  // tell jquery not to process the data
+                contentType: false, // tell jquery not to set contentType
+                success: function(data) {
+                    alert(data);
+                    location.reload();
+                }
+            });}
+            }
+{% endblock %}

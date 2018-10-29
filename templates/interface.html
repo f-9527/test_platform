@@ -1,0 +1,118 @@
+{% extends 'index.html' %}
+
+{% block title %} 测试大平台 {% endblock %}
+
+{% block css %}
+<style>
+    table,table th,table td {
+        border:2px solid black;
+    }
+    table {
+        margin-left:50px;
+        width: 1000px;
+        min-height: 30px;
+        line-height: 30px;
+        text-align: center;
+        border-collapse: collapse;
+        font-size:20px;
+    }
+    table td{
+        width:100px;
+
+    }
+    form input{
+        width:400px;
+        margin-left:90px;
+    }
+    form span{
+        text-align: right;
+        display:block;
+        width:70px;
+    }
+
+    .hide{
+        display:none;
+    }
+</style>
+{% endblock %}
+
+{% block subtitle %}
+<header>
+    <span class="icon">&#128132;</span>
+    <hgroup>
+        <h1>接口测试</h1>
+        <h2>自动化平台</h2>
+    </hgroup>
+</header>
+{% endblock %}
+
+{% block content %}
+<p style="margin:50px;font-size:30px;">接口概览</p>
+<table style="">
+    <thead>
+        <tr>
+            <th>产品</th>
+            <th>版本</th>
+            <th>接口数量</th>
+            <th>接口文档</th>
+            <th>备注</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for p in product %}
+        <tr>
+            <td>{{p.p_name}}</td>
+            <td>{{p.p_version}}</td>
+            <td><a href="/IF_list/{{p.p_name}}/{{p.p_version}}">{{p.IF_count}}</a></td>
+            <td><a href="{{p.IF_add}}">{{p.IF_add}}</a></td>
+            <td>{{p.ps}}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<button style="font-size:150%;margin:50px;" id="show_add_IF_info">新增项目接口</button>
+
+<form class="hide" style="margin:50px;" id="add_IF_info">
+    <ul>
+        <li><span>产品：</span><input id="p_name" type="text"></li>
+        <li><span>版本：</span><input id="version" type="text"></li>
+        <li><span>接口数量:</span><input id="IF_count" type="number"></li>
+        <li><span>接口文档：</span><input id="IF_add" type="text"></li>
+        <li><span>备注：</span><input id="ps" type="text"></li>
+        <li><button style="font-size:100%;" id="add_IF_info_b">新增</button></li>
+    </ul>
+</form>
+
+
+{% endblock %}
+
+{% block script %}
+    $(function(){
+        $('#int-test').addClass('section')
+
+        $('#show_add_IF_info').click(function(){
+            $('#add_IF_info').removeClass('hide')
+        })
+
+        $('#add_IF_info_b').click(function(){
+            $.ajax({
+                url:'/addIF',
+                type:'POST',
+                data: {
+                    'proName':$('#p_name').val(),
+                    'version':$('#version').val(),
+                    'IF_count':$('#IF_count').val(),
+                    'IF_add':$('#IF_add').val(),
+                    'ps':$('#ps').val(),
+                        },
+                success: function(data) {
+                    alert(data);
+                    location.reload();}
+
+            })
+        })
+
+    })
+
+
+{% endblock %}

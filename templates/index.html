@@ -35,21 +35,21 @@
 		<li id="wiki">
 			<a href="/wiki"><span class="icon">&#128196;</span> Wiki</a>
 		</li>
-		<li>
-			<a href="files.html"><span class="icon">&#128280;</span> 项目 </a>
+		<li id="product">
+			<a href="/product"><span class="icon">&#128280;</span> 项目 </a>
 		</li>
-		<li>
-			<a href="blog-timeline.html"><span class="icon">&#128204;</span> 测试 </a>
-			<!--<ul class="submenu">-->
-				<!--<li><a href="blog-new.html">ui测试</a></li>-->
+		<li id="int-test">
+			<a href="/interface"><span class="icon">&#128204;</span> 接口测试 </a>
+			<ul class="submenu">
+				<!--<li><a href="/add_script">新增脚本</a></li>-->
 				<!--<li><a href="blog-table.html">接口测试</a></li>-->
 				<!--<li><a href="comments-timeline.html">性能测试</a></li>-->
-			<!--</ul>-->
+			</ul>
 		</li>
 		<li><a href="statistics.html"><span class="icon">&#10000;</span> Statistics</a></li>
 		<li><a href="users.html"><span class="icon">&#10020;</span> Users </a></li>
 		<li>
-			<a href="ui-elements.html"><span class="icon">&#9881;</span> UI Elements</a>
+			<a href="ui-elements.html"><span class="icon">&#9881;</span> 设置</a>
 		</li>
 	</ul>
 </nav>
@@ -66,7 +66,7 @@
 			</hgroup>
 		</header>
 		{% endblock %}
-		<div style="min-height:700px">
+		<div style="min-height:700px;margin-left:100px;margin-top:50px;">
 			{% block content %}
 
 			{% endblock %}

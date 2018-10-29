@@ -1,0 +1,78 @@
+{% extends 'index.html' %}
+
+{% block title %} 测试大平台 {% endblock %}
+
+{% block css %}
+<style>
+    form textarea{
+        height:200px;
+
+        width:500px;
+        margin-left:70px;
+    }
+    form input{
+        width:200px;
+        margin-left:70px;
+    }
+
+    form p{
+        margin-top:20px;
+        margin-left:73px;
+        font-size:16px;
+
+    }
+
+
+</style>
+{% endblock %}
+
+{% block subtitle %}
+<header>
+    <span class="icon">&#128132;</span>
+    <hgroup>
+        <h1>接口测试</h1>
+        <h2>自动化平台</h2>
+    </hgroup>
+</header>
+{% endblock %}
+
+{% block content %}
+<form style="margin:50px;" id="add_IF_info">
+     <p style="color:#208ed3;font-size:25px;margin-bottom:20px;">新增脚本:</p>
+    <ul>
+        <li><input style="" type="text" readonly="readonly" value="产品"></li>
+        <li><input style="" type="text" readonly="readonly" value="版本"></li>
+        <li><input style="" type="text" readonly="readonly" value="{{i.name}}"></li>
+        <li><input style="" type="text" readonly="readonly" value="{{i.type}}"></li>
+        <li><input style="width:410px;" type="text" readonly="readonly" value="{{i.url}}"></li>
+        <p>接口参数:</p>
+        {% for p in i.parameter %}
+            <li><input id="{{p}}" type="text" value="{{p}}"><span>—</span><input style="margin-left:0px;" type="text"></li>
+        {% endfor %}
+
+        <p style="">预期结果:</p>
+        <li><input id="1" type="text" value="字段1"><span>—</span><input id="2" style="margin-left:0px;" type="text"></li>
+        <li id="add_b">
+            <button style="font-size:100%;margin-left:70px;" id="add_para_b" type="button">新增字段</button>
+            <button style="font-size:100%;margin-left:100px;" id="add_result_b" type="button">新增脚本</button>
+        </li>
+    </ul>
+
+</form>
+
+
+{% endblock %}
+
+{% block script %}
+    $(function(){
+        $('#int-test').addClass('section');
+
+        $('#add_para_b').click(function(){
+            var id = parseInt($('#add_b').prev().children("input:last-child").attr('id'));
+            $('#add_b').before('<li><input id='+(id+1)+' type="text" value="字段'+((id+2)/2)+'"><span>—</span><input id='+(id+2)+' style="margin-left:0px;" type="text"></li>');
+        });
+
+    })
+
+
+{% endblock %}

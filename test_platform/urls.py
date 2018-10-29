@@ -29,6 +29,11 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$',views.index),
     url(r'^login$',views.login),
-    url(r'wiki',views.wiki),
-    url(r'upload', views.upload_file)
+    url(r'^wiki$',views.wiki),
+    url(r'upload$', views.upload_file),
+    url(r'^interface$', views.interface),
+    url(r'^product$', views.product),
+    url(r'^addIF$', views.add_IF),
+    url(r'^IF_list/(\w+)/(\w+)', views.IF_list),
+    url(r'^add_script/(\d+)', views.addsrp),
 ]

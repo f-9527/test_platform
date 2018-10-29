@@ -1,0 +1,109 @@
+{% extends 'index.html' %}
+
+{% block title %} 测试大平台 {% endblock %}
+
+{% block css %}
+<style>
+    table,table th,table td {
+        border:2px solid black;
+    }
+    table {
+        margin-left:50px;
+        width: 1000px;
+        min-height: 30px;
+        line-height: 30px;
+        text-align: center;
+        border-collapse: collapse;
+        font-size:20px;
+    }
+    table td{
+        width:100px;
+
+    }
+    form input,form textarea{
+        width:400px;
+        margin-left:90px;
+    }
+    form span{
+        text-align: right;
+        display:block;
+        width:70px;
+    }
+
+    .hide{
+        display:none;
+    }
+</style>
+{% endblock %}
+
+{% block subtitle %}
+<header>
+    <span class="icon">&#128132;</span>
+    <hgroup>
+        <h1>接口测试</h1>
+        <h2>自动化平台</h2>
+    </hgroup>
+</header>
+{% endblock %}
+
+{% block content %}
+<p style="margin:50px;font-size:30px;">{产品名}接口列表</p>
+<table style="">
+    <thead>
+        <tr>
+            <th>接口名称</th>
+            <th>接口类型</th>
+            <th>url</th>
+            <th>参数</th>
+            <th>返回示例</th>
+            <th>ps</th>
+            <th>自动化脚本</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for i in IF_info %}
+        <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.type}}</td>
+            <td>{{i.url}}</td>
+            <td>{{i.parameter}}</td>
+            <td>{{i.example}}</td>
+            <td>{{i.ps}}</td>
+            {% if i.script == 1 %}
+            <td><a href="/add_script/{{i.id}}">编辑</a></td>
+            {% else %}
+            <td><a href="/add_script/{{i.id}}">新建</a></td>
+            {% endif %}
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<button style="font-size:150%;margin:50px;" id="show_add_IF_info">新增接口信息</button>
+
+<form class="hide" style="margin:50px;" id="add_IF_info">
+    <ul>
+        <li><span>接口名称：</span><input id="name" type="text"></li>
+        <li><span>接口类型：</span><input id="type" type="text"></li>
+        <li><span>url:</span><input id="url" type="text"></li>
+        <li><span>参数：</span><input id="para" type="text"></li>
+        <li><span>返回示例：</span><textarea id="exp"  rows="5"></textarea></li>
+        <li><span>备注：</span><input id="ps" type="text"></li>
+        <li><button style="font-size:100%;" id="add_info_b">新增</button></li>
+    </ul>
+</form>
+
+
+{% endblock %}
+
+{% block script %}
+    $(function(){
+        $('#int-test').addClass('section')
+
+        $('#show_add_IF_info').click(function(){
+            $('#add_IF_info').removeClass('hide')
+        })
+
+    })
+
+
+{% endblock %}
